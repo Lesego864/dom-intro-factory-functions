@@ -31,9 +31,7 @@ function callAndSms() {
 }
 const SmsandCalls = callAndSms();
 
-
-function calculateBtnClicked() {
-
+calculateBtnElement.addEventListener('click', function() {
     var billString = billStringElement.value;
     var billItems = billString.split(",");
     var billTotal = 0;
@@ -56,7 +54,5 @@ function calculateBtnClicked() {
     else if (billTotal >= 30) {
         newStyle.classList.add("danger");
     }
-}
 
-calculateBtnElement.addEventListener('click', calculateBtnClicked);
-
+});
